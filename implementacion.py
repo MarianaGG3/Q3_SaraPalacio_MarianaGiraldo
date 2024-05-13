@@ -42,7 +42,10 @@ def main():
             grados=input('elige a que grados deseas rotar la imagen.\n 1. 90° \n 2. 180° \n 3. 270°')
             rotar_imagen(key, grados)
         elif menu==4:
-            pass
+            key=input('ingrese la clave de la imagen que desea rotar: ')
+            umb= input('Ingrese el numero de umbral que tendra la imagen: ')
+            kernel=input('Ingrese el numero del kernel que tendra la imagen: ')
+            procesar_imagen(key, umb,kernel)
         elif menu==5:
             break
 menu()

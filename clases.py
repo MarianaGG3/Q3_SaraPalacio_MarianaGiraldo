@@ -50,6 +50,9 @@ class Paciente:
                 
 
     def rotar_imagen(key, grados):
-        img= dicc_archivos[key]
-        dcm = pydicom.dcmread(img) 
-    def procesar_imagen()
+        img= dicc_archivos[key] 
+    def procesar_imagen(key,umb,kernel_tam):
+        img= dicc_archivos[key] 
+        binarizada = cv2.threshold(img, umb, 255, cv2.THRESH_BINARY)
+        kernel = np.ones((kernel_tam, kernel_tam), np.uint8)
+        morfologia = cv2.morphologyEx(binarizada, cv2.MORPH_OPEN, kernel)
