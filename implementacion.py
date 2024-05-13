@@ -9,7 +9,7 @@ import numpy as np
 import clases 
 dicc_archivos={}
 dicc_pacientes={}
-p=Paciente
+
 def main():
     while True:
         menu=int(input("""
@@ -23,6 +23,7 @@ def main():
         if menu==1:
             archivo=input("ingrese nombre de la carpeta con archivos dicom")
             cargar_paciente(archivo)
+            p=paciente()
             dicc_pacientes[ID]=p 
             dicc_archivos[archivo]=nombre_nifti
            
@@ -34,7 +35,9 @@ def main():
                 # plt.show()
 
         elif menu==2:
-            pass
+            archivo= input('Ingrese nombre del archivo de la imagen')
+            ima=cv2.imread(archivo)
+            dicc_archivos[archivo]=ima
         elif menu==3:
             pass
         elif menu==4:

@@ -47,6 +47,6 @@ class Paciente:
                 imagen_nifti = nib.Nifti1Image(im, np.eye(4))
                 nombre_nifti = os.path.splitext(n)[0] + ".nii.gz"
                 nib.save(imagen_nifti, nombre_nifti)
-                return ' el paciente se cargo efectivamente'
+                
 
-    
+    def rotar_imagen()
