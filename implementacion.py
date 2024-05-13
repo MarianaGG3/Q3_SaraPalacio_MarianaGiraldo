@@ -22,22 +22,21 @@ def main():
 
         if menu==1:
             archivo=input("ingrese nombre de la carpeta con archivos dicom")
+            key=input('crear clave asociada al paciente:')
             cargar_paciente(archivo)
             p=paciente()
-            dicc_pacientes[ID]=p 
-            dicc_archivos[archivo]=nombre_nifti
+            dicc_pacientes[key]=p 
+            dicc_archivos[key]=nombre_nifti
            
-            
-
-        
 
                 # plt.imshow(im)
                 # plt.show()
 
         elif menu==2:
             archivo= input('Ingrese nombre del archivo de la imagen')
+            key=input('crear clave de la imagen: ')
             ima=cv2.imread(archivo)
-            dicc_archivos[archivo]=ima
+            dicc_archivos[key]=ima
         elif menu==3:
             pass
         elif menu==4:
