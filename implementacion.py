@@ -37,7 +37,7 @@ def main():
                 id = int(input("Ingrese la cedula: "))
                 edad= int(input("ingrese la edad"))
 
-                dicc_archivos[id]=[nombre,edad]
+                dicc_archivos[id]=[nombre,edad] 
 
                 # plt.imshow(im)
                 # plt.show()
