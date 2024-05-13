@@ -49,4 +49,7 @@ class Paciente:
                 nib.save(imagen_nifti, nombre_nifti)
                 
 
-    def rotar_imagen()
+    def rotar_imagen(key, grados):
+        img= dicc_archivos[key]
+        dcm = pydicom.dcmread(img) 
+    def procesar_imagen()

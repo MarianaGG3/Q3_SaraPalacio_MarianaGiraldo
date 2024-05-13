@@ -38,7 +38,9 @@ def main():
             ima=cv2.imread(archivo)
             dicc_archivos[key]=ima
         elif menu==3:
-            pass
+            key=input('ingrese la clave de la imagen que desea rotar: ')
+            grados=input('elige a que grados deseas rotar la imagen.\n 1. 90° \n 2. 180° \n 3. 270°')
+            rotar_imagen(key, grados)
         elif menu==4:
             pass
         elif menu==5:
