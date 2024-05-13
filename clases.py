@@ -9,17 +9,17 @@ class Paciente:
     def verNombre(self):
         return self.__nombre
     def verImagen(self):
-        return self.__servicio
+        return self.__imagen
     def verEdad(self):
-        return self.__genero
+        return self.__edad
     def verId(self):
-        return self.__cedula
+        return self.__id
     
     def asignarNombre(self,n):
         self.__nombre = n
     def asignarImagen(self,s):
-        self.__servicio = s
+        self.__imagen = s
     def asignarEdad(self,g):
-        self.__genero = g
+        self.__edad = g
     def asignarId(self,c):
-        self.__cedula = c
+        self.__id = c
