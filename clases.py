@@ -34,8 +34,8 @@ class Paciente:
     def asignarId(self,c):
         self.__id = c
 
-    def cargar_paciente(lectura):
-        if n.endswith('.dcm'):  
+    def cargar_paciente(self, archivo):
+        if archivo.endswith('.dcm'):  
                 lectura = os.path.join(archivo, n)
                 dcm = pydicom.dcmread(lectura)
                 
