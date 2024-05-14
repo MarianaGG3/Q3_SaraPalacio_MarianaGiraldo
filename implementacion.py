@@ -6,10 +6,10 @@ from pydicom.data import get_testdata_file
 from pydicom import dcmread
 import nibabel as nib
 import numpy as np
-from clases import *
+import clases 
 dicc_archivos={}
 dicc_pacientes={}
-p=Paciente
+
 def main():
     while True:
         menu=int(input("""
@@ -37,18 +37,28 @@ def main():
                 id = int(input("Ingrese la cedula: "))
                 edad= int(input("ingrese la edad"))
 
-                dicc_archivos[id]=[nombre,edad] 
+                dicc_archivos[id]=[nombre,edad]
 
                 # plt.imshow(im)
                 # plt.show()
 
         elif menu==2:
-            pass
+            archivo= input('Ingrese nombre del archivo de la imagen')
+            key=input('crear clave de la imagen: ')
+            ima=cv2.imread(archivo)
+            dicc_archivos[key]=ima
         elif menu==3:
-            pass
+            key=input('ingrese la clave de la imagen que desea rotar: ')
+            grados=input('elige a que grados deseas rotar la imagen.\n 1. 90° \n 2. 180° \n 3. 270°')
+            rotar_imagen(key, grados)
         elif menu==4:
-            pass
+            key=input('ingrese la clave de la imagen que desea rotar: ')
+            umb= input('Ingrese el numero de umbral que tendra la imagen: ')
+            kernel=input('Ingrese el numero del kernel que tendra la imagen: ')
+            procesar_imagen(key, umb,kernel)
         elif menu==5:
             break
+menu()
+
 
 
