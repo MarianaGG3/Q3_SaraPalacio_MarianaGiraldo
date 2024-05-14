@@ -2,7 +2,6 @@ import cv2
 import pydicom
 import matplotlib.pyplot as plt
 import os
-from pydicom.data import get_testdata_file
 from pydicom import dcmread
 import nibabel as nib
 import numpy as np
@@ -29,9 +28,6 @@ while True:
             print("Pacientes cargados:")
             print(dicc_pacientes)
 
-        # plt.imshow(im)
-        # plt.show()
-
     elif menu == 2:
         archivo = input('Ingrese nombre del archivo de la imagen: ')
         key = input('crear clave de la imagen: ')
@@ -39,9 +35,6 @@ while True:
         dicc_archivos[key] = ima
         print(dicc_archivos)
     elif menu == 3:
-        # key = input('ingrese la clave de la imagen que desea rotar: ')
-        # grados = input('cuantos grados deseas rotar la imagen 90°, 180° o 270°: ')
-        # p.rotar_imagen(key, grados)
 
         key = input('Ingrese la clave de la imagen DICOM que desea rotar: ')
         grados = input('Ingrese el valor de rotación de la imagen (90, 180, 270): ')
