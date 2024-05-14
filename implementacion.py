@@ -39,9 +39,14 @@ while True:
         dicc_archivos[key] = ima
         print(dicc_archivos)
     elif menu == 3:
-        key = input('ingrese la clave de la imagen que desea rotar: ')
-        grados = input('cuantos grados deseas rotar la imagen 90°, 180° o 270°: ')
+        # key = input('ingrese la clave de la imagen que desea rotar: ')
+        # grados = input('cuantos grados deseas rotar la imagen 90°, 180° o 270°: ')
+        # p.rotar_imagen(key, grados)
+
+        key = input('Ingrese la clave de la imagen DICOM que desea rotar: ')
+        grados = input('Ingrese el valor de rotación de la imagen (90, 180, 270): ')
         p.rotar_imagen(key, grados)
+
     elif menu == 4:
         key = input('ingrese la clave de la imagen que desea modificar: ')
         umb = input('Ingrese el numero de umbral que tendra la imagen: ')
